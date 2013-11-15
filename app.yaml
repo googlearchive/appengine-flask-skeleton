@@ -1,0 +1,46 @@
+# This file specifies your Python application's runtime configuration
+# including URL routing, versions, static file uploads, etc. See
+# https://developers.google.com/appengine/docs/python/config/appconfig
+# for details.
+
+# TODO: Enter your application id below. If you have signed up
+# using cloud.google.com/console use the "project id" for your application
+# id.
+application: your-app-or-project-id-here
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+# Handlers tell app engine how to route requests to your application.
+handlers:
+
+# Route requests to static files (and subdirectories) in the listed
+# directories.
+- url: /static
+  static_dir: static
+
+# Make robots.txt accessible at the root URL.
+- url: /robots.txt
+  static_files: static/robots.txt
+  upload: static/robots.txt
+
+# This handler tells app engine how to route requests to a WSGI application.
+# The script value is in the format <path.to.module>.<wsgi_application>
+# where <wsgi_application> is a WSGI application object.
+- url: .*  # This regex directs all routes to main.app
+  script: main.app
+
+# Third party libraries that are included in the App Engine SDK must be listed
+# here if you want to use them.  See
+# https://developers.google.com/appengine/docs/python/tools/libraries27 for
+# a list of libraries included in the SDK.  Third party libs that are *not* part
+# of the App Engine SDK don't need to be listed here, instead add them to your
+# project directory, either as a git submodule or as a plain subdirectory.
+# Note that dependencies must be located in your project directory - packages
+# installed in the Python environment are not loaded by the App Engine development
+# server or deployment tools.
+# TODO: List any other App Engine SDK libs you may need here.
+# libraries:
+# - name: pycrypto
+#   version: latest
