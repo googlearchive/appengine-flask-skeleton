@@ -6,11 +6,9 @@ Return "Hello World" at the root URL.
 import os
 import sys
 
-# required to load libraries under server/lib that Flask depends on
-sys.path.insert(1, os.path.join(os.path.abspath('.'), 'server/lib'))
+# sys.path includes 'server/lib' due to appengine_config.py
 from flask import Flask
 from flask import render_template
-
 app = Flask(__name__.split('.')[0])
 
 
