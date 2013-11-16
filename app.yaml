@@ -41,6 +41,6 @@ handlers:
 # installed in the Python environment are not loaded by the App Engine development
 # server or deployment tools.
 # TODO: List any other App Engine SDK libs you may need here.
-# libraries:
-# - name: pycrypto
-#   version: latest
+libraries:
+- name: jinja2
+  version: 2.6
