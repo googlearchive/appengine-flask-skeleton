@@ -1,6 +1,5 @@
 *.pyc
-# don't include Flask and depedencies
-server/lib/*
-# include README so user doesn't have to create this dir
-!server/lib/README.txt
+# don't include third-party dependencies.
+lib/
+!lib/README.md
 .DS_Store

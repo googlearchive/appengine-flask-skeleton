@@ -1,21 +1,19 @@
-""" main.py is the top level script.
+"""`main` is the top level module for your Flask application."""
 
-Return "Hello World" at the root URL.
-"""
-
-import os
-import sys
-
-# sys.path includes 'server/lib' due to appengine_config.py
+# Import the Flask Framework
 from flask import Flask
-from flask import render_template
-app = Flask(__name__.split('.')[0])
+app = Flask(__name__)
+# Note: We don't need to call run() since our application is embedded within
+# the App Engine WSGI application server.
 
 
 @app.route('/')
-@app.route('/<name>')
-def hello(name=None):
-  """ Return hello template at application root URL."""
-  return render_template('hello.html', name=name)
+def hello():
+    """Return a friendly HTTP greeting."""
+    return 'Hello World!'
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """Return a custom 404 error."""
+    return 'Sorry, Nothing at this URL.', 404
