@@ -16,17 +16,17 @@ See the README file for directions. You'll need python 2.7 and [pip 1.4 or later
    ```
    git clone https://github.com/GoogleCloudPlatform/appengine-python-flask-skeleton.git
    ```
-3. Install dependencies in the project's server/lib directory - App Engine
-   can only import libraries from inside your project directory.
+3. Install dependencies in the project's lib directory.
+   Note: App Engine can only import libraries from inside your project directory.
 
    ```
    cd appengine-python-flask-skeleton
-   pip install -r requirements.txt -t server/lib
+   pip install -r requirements.txt -t lib
    ```
 4. Run this project locally from the command line:
 
    ```
-   dev_appserver.py appengine-python-flask-skeleton
+   dev_appserver.py .
    ```
 
 Visit the application [http://localhost:8080](http://localhost:8080)
@@ -43,7 +43,7 @@ To deploy the application:
    application](https://developers.google.com/appengine/docs/python/tools/uploadinganapp) with
 
    ```
-   appcfg.py -A <your-project-id> --oauth2 update appengine-python-flask-skeleton
+   appcfg.py -A <your-project-id> --oauth2 update .
    ```
 1. Congratulations!  Your application is now live at your-app-id.appspot.com
 
