@@ -3,4 +3,4 @@ import site
 import os.path
 # add `lib` subdirectory as a site packages directory, so our `main` module can load
 # third-party libraries.
-sys.addsitedir(os.path.join(os.path.dirname(__file__), 'lib'))
+site.addsitedir(os.path.join(os.path.dirname(__file__), 'lib'))
