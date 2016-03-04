@@ -43,8 +43,15 @@ To deploy the application:
    application](https://developers.google.com/appengine/docs/python/tools/uploadinganapp) with
 
    ```
-   appcfg.py -A <your-project-id> -V v1 update .
+   appcfg.py update -A <your-project-id> -V v1 .
    ```
+   
+   If this isn't your first deployment, you will need to set the new version as the default version with
+   
+   ```
+   appcfg.py set_default_version -V v1 -A <your-project-id>
+   ```
+
 1. Congratulations!  Your application is now live at your-app-id.appspot.com
 
 ## Next Steps
