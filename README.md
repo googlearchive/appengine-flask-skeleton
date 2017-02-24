@@ -1,3 +1,9 @@
+# DEPRECATED
+
+This repoository is deprecated in favor of the
+sample [here]https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/appengine/standard/flask/hello_world).
+
+
 ## Python Flask Skeleton for Google App Engine
 
 A skeleton for building Python applications on Google App Engine with the
