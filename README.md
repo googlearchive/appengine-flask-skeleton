@@ -1,7 +1,8 @@
-# DEPRECATED
+![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
 
-This repoository is deprecated in favor of the
-sample [here](https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/appengine/standard/flask/hello_world).
+This project is no longer actively developed or maintained.
+
+For new work on this check out [flask Hello World](https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/appengine/standard/flask/hello_world).
 
 
 ## Python Flask Skeleton for Google App Engine
